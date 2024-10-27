@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:study_app/core/theme.dart';
+import 'package:study_app/features/home/views/home.dart';
 
-import 'features/home/ui/views/home_page.dart';
+import 'features/start/ui/views/start.dart';
 
 void main() {
-  runApp(const StudyApp());
+  runApp(
+    const StudyApp(),
+  );
 }
 
 class StudyApp extends StatelessWidget {
@@ -16,7 +19,8 @@ class StudyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: lightMode,
-      home: const HomePage(),
+      home: const Start(),
+      routes: {"home": (context) => const Home()},
     );
   }
 }
